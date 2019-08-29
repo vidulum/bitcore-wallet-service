@@ -12,7 +12,7 @@ var tingodb = require('tingodb')({
   memStore: true
 });
 
-var Bitcore = require('bitcore-lib-xsg');
+var Bitcore = require('bitcore-lib-snowgem');
 var Bitcore_ = {
   xsg: Bitcore
 };

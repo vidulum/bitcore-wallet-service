@@ -5,7 +5,7 @@ var chai = require('chai');
 var sinon = require('sinon');
 var should = chai.should();
 var TxProposal = require('../../lib/model/txproposal');
-var Bitcore = require('bitcore-lib-xsg');
+var Bitcore = require('bitcore-lib-snowgem');
 
 xdescribe('TxProposal', function() {
   describe('#create', function() {

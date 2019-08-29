@@ -5,7 +5,7 @@ var chai = require('chai');
 var sinon = require('sinon');
 var should = chai.should();
 var TxProposal = require('../../lib/model/txproposal');
-var Bitcore = require('bitcore-lib-snowgem');
+var Bitcore = require('bitcore-lib-vidulum');
 
 xdescribe('TxProposal', function() {
   describe('#create', function() {
@@ -24,10 +24,10 @@ xdescribe('TxProposal', function() {
       should.exist(txp);
       txp.amount.should.equal(aTXP().amount);
     });
-    it('should default to XSG coin', function() {
+    it('should default to VDL coin', function() {
       var txp = TxProposal.fromObj(aTXP());
       should.exist(txp);
-      txp.coin.should.equal('xsg');
+      txp.coin.should.equal('vdl');
     });
   });
 
@@ -115,7 +115,7 @@ var theRawTx = '0100000001ab069f7073be9b491bb1ad4233a45d2e383082ccc7206df905662d
 
 var aTxpOpts = function() {
   var opts = {
-    coin: 'xsg',
+    coin: 'vdl',
     network: 'livenet',
     message: 'some message'
   };

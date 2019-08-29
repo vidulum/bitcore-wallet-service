@@ -85,7 +85,7 @@ describe('Utils', function() {
         args: [1, 'bit'],
         expected: '0',
       }, {
-        args: [1, 'xsg'],
+        args: [1, 'vdl'],
         expected: '0.00',
       }, {
         args: [0, 'bit'],
@@ -94,19 +94,19 @@ describe('Utils', function() {
         args: [12345678, 'bit'],
         expected: '123,457',
       }, {
-        args: [12345678, 'xsg'],
+        args: [12345678, 'vdl'],
         expected: '0.123457',
       }, {
-        args: [12345611, 'xsg'],
+        args: [12345611, 'vdl'],
         expected: '0.123456',
       }, {
-        args: [1234, 'xsg'],
+        args: [1234, 'vdl'],
         expected: '0.000012',
       }, {
-        args: [1299, 'xsg'],
+        args: [1299, 'vdl'],
         expected: '0.000013',
       }, {
-        args: [1234567899999, 'xsg'],
+        args: [1234567899999, 'vdl'],
         expected: '12,345.679',
       }, {
         args: [12345678, 'bit', {
@@ -114,12 +114,12 @@ describe('Utils', function() {
         }],
         expected: '123.457',
       }, {
-        args: [12345678, 'xsg', {
+        args: [12345678, 'vdl', {
           decimalSeparator: ','
         }],
         expected: '0,123457',
       }, {
-        args: [1234567899999, 'xsg', {
+        args: [1234567899999, 'vdl', {
           thousandsSeparator: ' ',
           decimalSeparator: ','
         }],
@@ -133,8 +133,8 @@ describe('Utils', function() {
   });
 
   describe('#getAddressCoin', function() {
-    it('should identify xsg as coin for t1Xxa5ZVPKvs9bGMn7aWTiHjyHvR31XkUst', function() {
-      Utils.getAddressCoin('t1Xxa5ZVPKvs9bGMn7aWTiHjyHvR31XkUst').should.equal('xsg');
+    it('should identify vdl as coin for t1Xxa5ZVPKvs9bGMn7aWTiHjyHvR31XkUst', function() {
+      Utils.getAddressCoin('t1Xxa5ZVPKvs9bGMn7aWTiHjyHvR31XkUst').should.equal('vdl');
     });
     it('should throw error for t1L', function() {
       should.Throw(() => Utils.getAddressCoin('t1L'), Error);

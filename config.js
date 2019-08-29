@@ -38,14 +38,14 @@ var config = {
     },
   },
   blockchainExplorerOpts: {
-    xsg: {
+    vdl: {
       livenet: {
         provider: 'insight',
-        url: 'https://explorer.snowgem.org:443',
+        url: 'https://explorer.vidulum.app:443',
       },
       testnet: {
         provider: 'insight',
-        url: 'https://explorer.snowgem.org:443',
+        url: 'https://explorer.vidulum.app:443',
         // url: 'http://localhost:3001',
         // Multiple servers (in priority order)
         // url: ['http://a.b.c', 'https://test-insight.bitpay.com:443'],
@@ -55,7 +55,7 @@ var config = {
   pushNotificationsOpts: {
     templatePath: './lib/templates',
     defaultLanguage: 'en',
-    defaultUnit: 'xsg',
+    defaultUnit: 'vdl',
     subjectPrefix: '',
     pushServerUrl: 'https://fcm.googleapis.com/fcm',
     authorizationKey: '',
@@ -73,7 +73,7 @@ var config = {
   //  from: 'wallet-service@bitcore.io',
   //  templatePath: './lib/templates',
   //  defaultLanguage: 'en',
-  //  defaultUnit: 'xsg',
+  //  defaultUnit: 'vdl',
   //  publicTxUrlTemplate: {
   //    livenet: 'https://insight.bitpay.com/tx/{{txid}}',
   //    testnet: 'https://test-insight.bitpay.com/tx/{{txid}}',

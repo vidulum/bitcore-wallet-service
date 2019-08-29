@@ -72,7 +72,7 @@ describe('Push notifications', function() {
               pushNotificationsOpts: {
                 templatePath: './lib/templates',
                 defaultLanguage: 'en',
-                defaultUnit: 'xsg',
+                defaultUnit: 'vdl',
                 subjectPrefix: '',
                 pushServerUrl: 'http://localhost:8000',
                 authorizationKey: 'secret',
@@ -245,7 +245,7 @@ describe('Push notifications', function() {
       server.savePreferences({
         email: 'copayer1@domain.com',
         language: 'es',
-        unit: 'xsg',
+        unit: 'vdl',
       }, function(err) {
         server.createAddress({}, function(err, address) {
           should.not.exist(err);

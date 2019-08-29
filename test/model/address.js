@@ -12,7 +12,7 @@ describe('Address', function() {
     it('should create livenet address', function() {
       var x = Address.create({
         address: 't1S8k9fTUs4rntErEL4TZ9uoDTAPntpzQZt',
-        coin: 'xsg',
+        coin: 'vdl',
         walletId: '123',
         isChange: false,
         path: 'm/133/1',
@@ -24,7 +24,7 @@ describe('Address', function() {
     it('should create testnet address', function() {
       var x = Address.create({
         address: 'tmHMBeeYRuc2eVicLNfP15YLxbQsooCA6jb',
-        coin: 'xsg',
+        coin: 'vdl',
         walletId: '123',
         isChange: false,
         path: 'm/133/1',
@@ -41,7 +41,7 @@ describe('Address', function() {
       }, {
         xPubKey: 'xpub6ExXBwohmf44nLGfR9Gju8ZEK5ZxusKS5iPMRoD3gEeMmwYAU1Z3K17K7mHdzPcda5oLSwqeJ3MwT28Yx59hu7EDEvSnkNaiX8jGVbt7Btu'
         // PubKey(xPubKey/0/0) -> 03162179906dbe6a67979d4f8f46ee1db6ff81715f465e6615a4f5969478ad2171
-      }], 'm/0/0', 1, 'xsg', 'livenet', false);
+      }], 'm/0/0', 1, 'vdl', 'livenet', false);
       should.exist(address);
       address.walletId.should.equal('wallet-id');
       address.address.should.equal('t3XVysjELV6kiPtpg26ThRycgn1jAVmaNri');
@@ -54,7 +54,7 @@ describe('Address', function() {
       var address = Address.derive('wallet-id', 'P2SH', [{
         xPubKey: 'xpub6ExXBwohmf44nLGfR9Gju8ZEK5ZxusKS5iPMRoD3gEeMmwYAU1Z3K17K7mHdzPcda5oLSwqeJ3MwT28Yx59hu7EDEvSnkNaiX8jGVbt7Btu'
         // PubKey(xPubKey/0/0) -> 03fe466ea829aa4c9a1c289f9ba61ebc26a61816500860c8d23f94aad9af152ecd
-      }], 'm/0/0', 1, 'xsg', 'livenet', false);
+      }], 'm/0/0', 1, 'vdl', 'livenet', false);
       should.exist(address);
       address.walletId.should.equal('wallet-id');
       address.address.should.equal('t3ekqP55iTftqgUuSKmHkSGqSkMCAu1EcFn');
@@ -67,7 +67,7 @@ describe('Address', function() {
       var address = Address.derive('wallet-id', 'P2PKH', [{
         xPubKey: 'xpub6ExXBwohmf44nLGfR9Gju8ZEK5ZxusKS5iPMRoD3gEeMmwYAU1Z3K17K7mHdzPcda5oLSwqeJ3MwT28Yx59hu7EDEvSnkNaiX8jGVbt7Btu'
         // PubKey(xPubKey/1/2) -> 0232c09a6edd8e2189628132d530c038e0b15b414cf3984e532358cbcfb83a7bd7
-      }], 'm/1/2', 1, 'xsg', 'livenet', true);
+      }], 'm/1/2', 1, 'vdl', 'livenet', true);
       should.exist(address);
       address.walletId.should.equal('wallet-id');
       address.address.should.equal('t1LPNoYhautRMf8b7QezpiRW84kCsdSLoox');
